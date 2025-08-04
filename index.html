@@ -1,83 +1,271 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Kiptoo Collins Towett | Portfolio</title>
-  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Kiptoo Collins Towett - Portfolio</title>
+
+  <!-- Font Awesome for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      background-color: #f5f5f5;
+      color: #333;
+    }
+
+    header {
+      background-color: turquoise;
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    .logo {
+      font-size: 1.5rem;
+      font-weight: bold;
+      color: white;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 1.5rem;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    section {
+      padding: 4rem 2rem;
+      max-width: 900px;
+      margin: auto;
+    }
+
+    #home {
+      text-align: center;
+      background-color: #e0f7f7;
+    }
+
+    .profile-img {
+      width: 140px;
+      height: 140px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-bottom: 1rem;
+      border: 4px solid turquoise;
+    }
+
+    h1 {
+      font-size: 2rem;
+      margin-bottom: 0.5rem;
+    }
+
+    h2 {
+      font-size: 1.8rem;
+      margin-bottom: 1rem;
+      color: turquoise;
+    }
+
+    ul {
+      margin-left: 1.5rem;
+      margin-bottom: 1rem;
+    }
+
+    .project-card {
+      background-color: white;
+      padding: 1rem;
+      margin: 1rem 0;
+      border-left: 5px solid turquoise;
+      border-radius: 6px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      max-width: 500px;
+    }
+
+    input, textarea {
+      padding: 0.8rem;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      font-size: 1rem;
+    }
+
+    button {
+      padding: 0.8rem;
+      background-color: turquoise;
+      color: white;
+      border: none;
+      font-weight: bold;
+      cursor: pointer;
+      border-radius: 5px;
+    }
+
+    .download-btn {
+      display: inline-block;
+      margin-top: 1rem;
+      padding: 0.7rem 1.5rem;
+      background-color: turquoise;
+      color: white;
+      text-decoration: none;
+      border-radius: 5px;
+      font-weight: bold;
+      transition: background-color 0.3s ease;
+    }
+
+    .download-btn:hover {
+      background-color: #009999;
+    }
+
+    footer {
+      text-align: center;
+      padding: 2rem;
+      background-color: #222;
+      color: white;
+    }
+
+    footer a {
+      color: white;
+      margin: 0 0.5rem;
+      font-size: 1.2rem;
+    }
+
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .intro, section, .project-card {
+      animation: fadeInUp 0.6s ease-in-out;
+    }
+  </style>
 </head>
 <body>
 
-  <!-- Header -->
   <header>
-    <h1>Kiptoo Collins Towett</h1>
+    <div class="logo">Billiacha</div>
     <nav>
-      <a href="#about">About</a>
-      <a href="#languages">Languages</a>
-      <a href="#education">Education</a>
-      <a href="#interests">Interests</a>
-      <a href="#projects">Projects</a>
-      <a href="#contact">Contact</a>
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Languages</a></li>
+        <li><a href="#education">Education</a></li>
+        <li><a href="#interests">Interests</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
     </nav>
   </header>
 
-  <!-- About Section -->
-  <section id="about">
-    <h2>About Me</h2>
-    <p>Hi! I’m Kiptoo Collins Towett, a passionate web developer with a love for creating functional and beautiful web experiences.</p>
+  <section id="home">
+    <div class="intro">
+      <img src="portfolio.jpg" alt="Profile Picture" class="portfolio-img" sizes="(min-width: 20px) 10vw, 20px"/>
+      <h1>Hi, I'm Kiptoo Collins Towett</h1>
+      <p>Web Developer | Tech Enthusiast | AI Innovator</p>
+    </div>
   </section>
 
-  <!-- Programming Languages -->
-  <section id="languages">
+  <section id="about">
+    <h2>About Me</h2>
+    <p>I’m a passionate web developer based in Kenya. I love building efficient, visually appealing websites and AI-integrated tools. I'm driven by curiosity and innovation.</p>
+  </section>
+
+  <section id="skills">
     <h2>Programming Languages</h2>
     <ul>
-      <li>HTML</li>
-      <li>CSS</li>
+      <li>HTML5 & CSS3</li>
       <li>Python</li>
-      <li>JavaScript</li>
+      <li>JavaScript (basic)</li>
+      <li>SQL</li>
     </ul>
   </section>
 
-  <!-- Educational Background -->
   <section id="education">
     <h2>Educational Background</h2>
-    <p>I hold a degree in Computer Science from Mount Kenya University.</p>
-    <a href="c:\Users\user 1\OneDrive\Documents\kiptoo Collins Towet CV.pdf" download>📄 Download My CV</a>
+    <p>I hold a Diploma in Information Technology from Mount Kenya University.</p>
+    <a href="Kiptoo_Collins_CV.pdf" download class="download-btn">Download My CV</a>
   </section>
 
-  <!-- Interests -->
   <section id="interests">
     <h2>Interests</h2>
     <ul>
-      <li>Web Development: Exploring modern frameworks and best practices</li>
-      <li>Tech Innovations: Keeping up with emerging trends in technology</li>
+      <li>Web Development: Creating user-friendly, responsive websites.</li>
+      <li>Tech Innovations: Exploring emerging AI trends and tools.</li>
+      <li>Digital Payment Integration: Building solutions with M-Pesa and mobile tech.</li>
     </ul>
   </section>
 
-  <!-- Projects -->
   <section id="projects">
     <h2>Projects</h2>
-    <ul>
-      <li><strong><a href="https://github.com/yourusername/project1">Project 1</a></strong>: A rent billing system for Kenyan landlords using M-Pesa.</li>
-      <li><strong><a href="https://github.com/Billiacha/Kiptoo.git">Project 2</a></strong>: Portfolio website with responsive design.</li>
-    </ul>
+    <div class="project-card">
+      <h3>House Billing Management System</h3>
+      <p>A smart rent & utilities platform for Kenyan landlords. Features M-Pesa, AI chatbot, and tenant tracking.</p>
+    </div>
+    <div class="project-card">
+      <h3>Heart Disease Prediction</h3>
+      <p>Machine learning model using SVM to predict heart disease risk based on health metrics.</p>
+    </div>
   </section>
 
-  <!-- Contact Form -->
   <section id="contact">
     <h2>Contact Me</h2>
-    <form action="mailto:collinstowet85@gmail.com" method="post" enctype="text/plain">
-      <input type="text" name="name" placeholder="Your Name" required>
-      <input type="email" name="email" placeholder="Your Email" required>
+    <form id="contact-form">
+      <input type="text" name="user_name" placeholder="Your Name" required />
+      <input type="email" name="user_email" placeholder="Your Email" required />
       <textarea name="message" placeholder="Your Message" required></textarea>
       <button type="submit">Send</button>
     </form>
+    <p>Email: collinstowet85@gmail.com</p>
   </section>
 
-  <!-- Footer -->
   <footer>
-    <p>&copy; 2025 Kiptoo Collins Towett</p>
+    <p>© 2025 Kiptoo Collins Towett. All rights reserved.</p>
+    <div>
+      <a href="#"><i class="fab fa-github"></i></a>
+      <a href="#"><i class="fab fa-linkedin"></i></a>
+    </div>
   </footer>
+
+  <!-- Optional EmailJS Script -->
+  <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+  <script>
+    emailjs.init("YOUR_USER_ID"); // Replace with your EmailJS user ID
+    document.getElementById('contact-form').addEventListener('submit', function(e) {
+      e.preventDefault();
+      emailjs.sendForm('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', this)
+        .then(() => alert('Message sent!'))
+        .catch(error => alert('Failed: ' + JSON.stringify(error)));
+    });
+  </script>
 
 </body>
 </html>
